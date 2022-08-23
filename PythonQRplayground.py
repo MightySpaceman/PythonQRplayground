@@ -1,6 +1,9 @@
 import qrcode
 from pathlib import Path
 
+custom_path_message = r"Enter Custom Path (e.g. C:\tmp )"
+custom_path_message += "\n"
+
 def create_qr():
     img = qrcode.make(text_input)
     type(img)
@@ -21,14 +24,14 @@ while True:
 
         if path_input_question == 'y':
             path_input = str(Path.home() / "Downloads")
-            path_input += text_input
+            path_input += f"\{text_input}"
             path_input += '.png'
         elif path_input_question == 'n':
-            path_input = input(r'Enter Custom Path (e.g. C:\tmp\ )\n')
+            path_input = input(custom_path_message)
+            path_input += r"\\"
             path_input += text_input
             path_input += '.png'
         create_qr()
-
 
 
 
