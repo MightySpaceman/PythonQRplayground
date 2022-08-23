@@ -13,8 +13,7 @@ while True:
     if rickroll_question == 'n':
         text_input = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
         path_input = str(Path.home() / "Downloads")
-        path_input += 'Rickroll'
-        path_input += '.png'
+        path_input += '\Rickroll.png'
         create_qr()
     elif rickroll_question == 'y':
         text_input = input('Enter Plain Text or Link You Want To Encode\n')
@@ -25,7 +24,7 @@ while True:
             path_input += text_input
             path_input += '.png'
         elif path_input_question == 'n':
-            path_input = input(r'Enter Custom Path (e.g. C:\\tmp\\ )\n')
+            path_input = input(r'Enter Custom Path (e.g. C:\tmp\ )\n')
             path_input += text_input
             path_input += '.png'
         create_qr()
